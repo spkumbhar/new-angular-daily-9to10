@@ -1,23 +1,37 @@
 <div class="container">
-  <div class="row">
+
+<!-- <div class="row">
     <div class="col-md-12">
       <input type="text">
 
     </div>
 
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <input type="button" value="1">
-      <input type="button" value="2">
-      <input type=button value="3">
-      <input type="button" value="4">
-    </div>
-  </div>
-
+<!--
   <div class="row">
     <div class="col-md-12">
       <input type="button" value="okay" (click)="clkBtn($event)">
     </div>
   </div>
+-->
+
+        <div class="card" style="width: 18rem;">
+          <input type="text" placeholder="Enter input" #val1> <input  placeholder="Enter input" type="text" #val2>
+
+            <div class="card-body">
+              <p><input class="btn btn-info"  type="button" value="+" (click)='result=+val1.value + +val2.value'>
+
+
+
+              <input class="btn btn-info"  type="button" value="-" (click)='result=val1.value-val2.value'>
+            </p>
+              <p>
+              <input class="btn btn-info"  type="button" value="*" (click)='result=val1.value*val2.value'>
+              <input class="btn btn-info"  type="button" value="%" (click)='result=val1.value%val2.value'>
+              </p>
+          </div>
+          <input type="text" [value]=result placeholder="Result">
+        </div>
+
 </div>
+

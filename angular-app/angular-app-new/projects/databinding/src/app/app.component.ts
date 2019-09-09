@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  result: number;
+
   title = 'databinding ' ;
   alertTxt = 'Please Enter Your details';
   clkBtn($ev: any) {
     console.log($ev)
   }
+
 }
