@@ -1,0 +1,11 @@
+<div class="container bg-info p-3">
+<div class="row mt-3">
+  <div class="col-md-3">
+          <app-country-list [country]="countryObj" (picked)="onPick($event)"></app-country-list>
+  </div>
+  <div class="col-md-9">
+         <app-flag-text [country]="countryObj" ></app-flag-text>
+          <app-footer [country]="countryObj"></app-footer>
+  </div>
+</div>
+</div>
