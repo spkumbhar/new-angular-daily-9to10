@@ -1,0 +1,50 @@
+<div class="container">
+
+<div class="row" *ngIf="isVisible">
+<div class="col-md-12">
+
+  <p class="alert alert-info">India (official name: the Republic of India;[19] Hindi:
+    Bhārat Gaṇarājya) is a country in South Asia.</p>
+</div>
+</div>
+<ng-template [ngIf]="isVisible">
+  <div class="row" >
+    <div class="col-md-12">
+
+      <p class="alert alert-info">India (official name: the Republic of India;[19] Hindi:
+        Bhārat Gaṇarājya) is a country in South Asia.</p>
+    </div>
+    </div>
+
+</ng-template>
+<div class="row">
+<div class="col-md-12">
+<input type="button" value="Okay" class="btn btn-info" (click)="isVisible=!isVisible">
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ul>
+      <li *ngFor="let cn of country;let i = index;">{{i}}: {{cn.nm}}==>{{cn.capital}}</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+<p>Click on country name</p>
+  <ul>
+    <li (click)="conName='India'">India</li>
+    <li (click)="conName='USA'">USA</li>
+    <li (click)="conName='UK'">United Kingdom</li>
+    </ul>
+</div>
+
+<div class="row" class="alert alert-info">
+  Capital of {{conName}} is :
+  <div [ngSwitch]="conName">
+    <p *ngSwitchCase="'India'" >New Delhi</p>
+    <p *ngSwitchCase="'USA'" >Washington</p>
+    <p *ngSwitchCase="'UK'" >London</p>
+    <p *ngSwitchDefault >Tokyo</p>
+  </div>
+  </div>
+</div>

@@ -46,6 +46,7 @@ export class ParentCompComponent implements OnInit {
     */
 
     this.countryObj= evDt
+
     /*countryObj: FlagInfo = {
     title:  'India',
     imgUrl: 'assets/i.png',
