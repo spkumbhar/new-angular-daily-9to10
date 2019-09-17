@@ -38,12 +38,14 @@ export class ParentCompComponent implements OnInit {
 
 
   onPick(evDt: FlagInfo) {
-    this.countryObj.title = evDt.title
+    /*this.countryObj.title = evDt.title
     this.countryObj.info = evDt.info
     this.countryObj.address = evDt.address
     this.countryObj.mobile = evDt.mobile
     this.countryObj.imgUrl = evDt.imgUrl
+    */
 
+    this.countryObj= evDt
     /*countryObj: FlagInfo = {
     title:  'India',
     imgUrl: 'assets/i.png',
