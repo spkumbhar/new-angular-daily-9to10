@@ -9,7 +9,9 @@ import { CountryInfo } from './country.config';
 })
 export class AppComponent {
   title = 'directives';
+
   isVisible: boolean = true;
+
   country: Array<CountryInfo> = [
     {nm: 'India', capital: 'New Delhi'},
     {nm: 'United states of America', capital: 'Washignton'},
