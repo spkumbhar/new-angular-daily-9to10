@@ -1,5 +1,4 @@
 <div class="container">
-
 <div class="row" *ngIf="isVisible">
 <div class="col-md-12">
 
@@ -10,7 +9,6 @@
 <ng-template [ngIf]="isVisible">
   <div class="row" >
     <div class="col-md-12">
-
       <p class="alert alert-info">India (official name: the Republic of India;[19] Hindi:
         Bhārat Gaṇarājya) is a country in South Asia.</p>
     </div>
@@ -46,5 +44,20 @@
     <p *ngSwitchCase="'UK'" >London</p>
     <p *ngSwitchDefault >Tokyo</p>
   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <ng-template [appAppUnless]="false">
+            <div class="row border border-primary" >
+              <div class="col-md-12">
+                <p class="alert alert-info">
+                  Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by
+                  adding, removing, or manipulating elements.
+                </p>
+              </div>
+            </div>
+          </ng-template>
+
+    </div>
   </div>
 </div>
