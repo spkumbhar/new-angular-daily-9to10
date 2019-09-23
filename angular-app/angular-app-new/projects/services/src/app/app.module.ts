@@ -2,18 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ConListComponent } from './con-list/con-list.component';
-import {ServicesService} from './services.service';
+import { MyComponent } from './my/my.component';
+import { MyService } from './my.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConListComponent
+    MyComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [ServicesService],
+//providers: [MyService], module level service  provider
   bootstrap: [AppComponent]
 })
 export class AppModule { }
