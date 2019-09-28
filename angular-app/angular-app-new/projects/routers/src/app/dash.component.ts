@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dash',
@@ -7,13 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./dash.component.css']
 })
 export class DashComponent implements OnInit {
-
-  constructor(private router: Router) { }
+userName: string;
+password: string;
+  constructor(
+    private router: Router,
+    private acRt: ActivatedRoute
+    ) { }
 
   ngOnInit() {
+
+    this.acRt.queryParams.subscribe(prms => {
+      this.userName = prms.usrName;
+      this.password = prms.password;
+    } );
+
   }
 
-  onChat(usr:  string){
-    this.router.navigate(['chat',usr])
+  onChat(usr: string){
+    this.router.navigate(['chat', usr])
   }
 }

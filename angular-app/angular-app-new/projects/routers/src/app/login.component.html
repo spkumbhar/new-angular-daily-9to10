@@ -1,7 +1,12 @@
 <div class="row">
   <div class="col-md-12">
-    <input type="button" class="btn btn-info" (click)="onClick()" value="Login">
+    <input type="text" placeholder="Username" #usr>
+    <input type="text" placeholder="password" #pass>
+    <input type="button" class="btn btn-info" (click)="onClick(usr.value,pass.value)" value="Login">
+
     <a [routerLink]="['dash','123']" [queryParams]="{'user':123,'pass':'password'}">Dash Board
+
+
     </a>
   </div>
 </div>

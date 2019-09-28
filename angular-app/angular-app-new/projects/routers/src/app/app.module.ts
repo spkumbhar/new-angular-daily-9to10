@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login.component';
 import { DashComponent } from './dash.component';
 import { ChatComponent } from './chat.component';
+import { ProfileComponent } from './dash/profile.component';
+import { FriendlistComponent } from './dash/friendlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashComponent,
-    ChatComponent
+    ChatComponent,
+    ProfileComponent,
+    FriendlistComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { __param } from 'tslib';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +9,26 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  userName: string;
+  pass: string;
+  constructor(
+    private router: Router,
+    private acRt: ActivatedRoute
+    ) { }
 
   ngOnInit() {
+
   }
 
-  onClick(usr: string){
-    this.router.navigate(['dash', '123'], { queryParams: {usr: 'sonali', pass : 'password'} } );
+  onClick(userName: string , pass: string) {
+    this.router.navigate(['dash', '123'],
+    {
+      queryParams:
+      {
+        usrName: userName,
+        password: pass
+      }
+    }
+    );
   }
 }

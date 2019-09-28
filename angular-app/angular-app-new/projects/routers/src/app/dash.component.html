@@ -4,6 +4,20 @@
       <input type=text #usr>
       This is dashbaord
       <input type="button" value="Chat" class="btn btn-info" (click)="onChat(usr.value)">
+      <p>userName : {{userName}}</p>
+      <p>Password : {{password}}</p>
+
+      <p>
+        <a [routerLink]="['profile'] ">Profile</a>
+        <a [routerLink]="['friends']" >friend list</a>
+      </p>
     </div>
   </div>
+
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <router-outlet></router-outlet>
+  </div>
+
 </div>
