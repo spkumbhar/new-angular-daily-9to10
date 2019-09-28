@@ -13,7 +13,8 @@ import { MyService } from './my.service';
   imports: [
     BrowserModule
   ],
-//providers: [MyService], module level service  provider
+  //module level service provider
+  providers: [MyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
