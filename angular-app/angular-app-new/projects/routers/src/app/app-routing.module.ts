@@ -16,7 +16,7 @@ const routes: Routes = [
 {path: 'chat' , component: ChatComponent},
 {path: 'chat/:usr', component: ChatComponent},
 {path: 'dash', component: DashComponent},
-{path: 'dash/:usr', component: DashComponent, children: dashRoutes, canActivate:[DashGuard]},
+{path: 'dash/:usr', component: DashComponent, children: dashRoutes, canActivate: [DashGuard]},
 {path: '**', redirectTo : ''}
 ];
 

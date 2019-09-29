@@ -1,0 +1,12 @@
+<h6 class="text-muted">Template driven form </h6>
+<div class="row">
+  <form #frm="ngForm" (ngSubmit)="onSub(frm)">
+    <div><input type="text" name=name placeholder="name" #name="ngModel" ngModel required ></div>
+    <p *ngIf="name.errors" class="text-warning">Enter valid Username</p>
+    <div><input type="text" name=eml placeholder="eml" #eml="ngModel" ngModel required ></div>
+        <p *ngIf="eml.errors" class="text-warning">Enter valid email</p>
+    <div><input type="text" name=pass placeholder="pass" #pass="ngModel" ngModel required></div>
+    <p *ngIf="pass.errors" class="text-warning">Enter valid password</p>
+    <input type="submit" value="Submit">
+  </form>
+</div>

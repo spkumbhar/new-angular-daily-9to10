@@ -1,0 +1,24 @@
+<form novalidate (ngSubmit)="onSub()" [formGroup]="fg">
+<p>
+  <input type="text" formControlName="usNm" placeholder="Enter UserName">
+
+</p>
+<p *ngIf = "fg.controls.usNm.errors">Enter Valid username
+</p>
+<p>
+  <input type="text" formControlName="pass" placeholder="Enter password">
+</p>
+<p *ngIf = "fg.controls.pass.errors" >Enter Valid password</p>
+<p>
+  <input type="text" formControlName="eml" placeholder="Enter Email ">
+</p>
+<p *ngIf="fg.controls.eml.errors">Enter Valid Email</p>
+<p>
+  <input type="submit" value="Save" >
+
+</p>
+</form>
+
+
+
+
