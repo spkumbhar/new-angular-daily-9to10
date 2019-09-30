@@ -9,7 +9,7 @@ export class RegValidators {
 
 
     // tslint:disable-next-line:align
-    } return { isStartWithA: false}
+    } return { isStartWithA: true}
 
   }
 }
