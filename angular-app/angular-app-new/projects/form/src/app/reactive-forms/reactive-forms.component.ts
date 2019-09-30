@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { RegValidators } from './reg,validators';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -15,17 +16,23 @@ export class ReactiveFormsComponent implements OnInit {
 
   ngOnInit() {
 
-   const emlVlds = Validators.compose([
-    Validators.required, Validators.email
-   ]
+    const uNameVlds = Validators.compose([
+      Validators.required,
+      RegValidators.isStartWithA
+    ]
     )
 
-   this.fg = this.fb.group({
-    usNm: this.fb.control('', Validators.required),
-    pass: this.fb.control('', Validators.required),
-    eml: this.fb.control('', emlVlds)
+    const emlVlds = Validators.compose([
+      Validators.required, Validators.email
+    ]
+    )
 
-  })
+    this.fg = this.fb.group({
+      usNm: this.fb.control('', uNameVlds),
+      pass: this.fb.control('', Validators.required),
+      eml: this.fb.control('', emlVlds)
+
+    })
   }
 
   onSub() {
